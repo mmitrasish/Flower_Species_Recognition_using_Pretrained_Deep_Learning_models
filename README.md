@@ -14,4 +14,14 @@ For extracting features using ConvNets, you have to run the python program 'feat
 # Classifying the Dataset
 Basically, Logistic Regression is used as classifier in this code. The tensor for features is 1D so Logistic Regression will fit best in this case. For classifying, you have to run the python program 'classifier.py'. This will automatically train the classifier and find the accuracy from 1st Rank and 5th Rank, also a classificaton report and save it to 'Result.txt' file. It also generate a confusion matrix with is saved as 'confusion_matrix.jpg'.
 # Predictng Flowers directly from URL
-In this code, I have added a user input url for prediction. In this, you have to run the python program 'prediction.py' where you have to provide a url link having image of any flower. This will automatically retrive the image and save it to local memory. Then, it will automatically load the image and extract its features same way as eirlier.  
+In this code, I have added a user input url for prediction. In this, you have to run the python program 'prediction.py' where you have to provide a url link having image of any flower. This will automatically retrive the image and save it to local memory. Then, it will automatically load the image and extract its features same way as earlier. And it will predict the class for the image. The picture will be displayed or saved in the local machine with its predicted value.
+# Dependencies
+You will need the following Python packages to run the code.
+1.  Theano or TensorFlow
+2.  Keras
+3.  NumPy
+4.  Scikit-Learn
+5.  Matplotlib
+6.  Seaborn
+7.  h5py
+8.  Dataset used here is https://www.kaggle.com/alxmamaev/flowers-recognition/data
