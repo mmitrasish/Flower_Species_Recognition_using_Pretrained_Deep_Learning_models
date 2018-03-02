@@ -1,0 +1,16 @@
+{
+    "test_path": "data/val", 
+    "features_path": "output/resnet50/features.h5", 
+    "include_top": "false", 
+    "weigths": "imagenet", 
+    "results": "output/resnet50/results.txt", 
+    "labels_path": "output/resnet50/labels.h5", 
+    "classifier_path": "output/resnet50/classifier.pickle", 
+    "seed": 9, 
+    "weights": "imagenet", 
+    "model_path": "output/resnet50/model", 
+    "test_size": 0.1, 
+    "model": "resnet50", 
+    "train_path": "train", 
+    "num_classes": 5
+}
