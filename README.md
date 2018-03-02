@@ -1,1 +1,14 @@
 # Flower_Species_Recognition_using_Pretrained_Deep_Learning_models
+
+This code is for "Flower Species Recognition using Pretrained Models". In this code, we will be using the pre-trained Deep Neural Nets trained on the ImageNet challenge that are made publicly available in Keras. We will specially use Kaggle Dataset of Flower Recognition.
+The pre-trained models we will consider are VGG16, VGG19, Inception-v3, Xception, ResNet50, InceptionResNetv2 and MobileNet. 
+# Organizing the Dataset
+The dataset you will be provided is in Raw Form. We will have to Organize the dataset. For this you will have to run the python program 'data_organizer.py'. This will automatically copy the image to the destination path. Also you have to input relevent info regarding 'path to raw dataset', 'path to training dataset', 'number of classes', 'number of images you want to train' and 'name of classes'.
+# Model Selection
+We have many pre-trained models. So, its time to choose which Model you want to use to Extract features. For this, you have to run the python program 'model_selector.py'. This code will give you options and you have to input the model name for extracting features from training images. Also you have to input relevent info regarding 'number of classes', 'test size' and 'path to training dataset'. This code basically update the 'conf.json' file as per user input. 
+## WARNING: YOU HAVE TO CLONE THE 'CONF/CONF.JSON' FILE OTHERWISE MODEL SELECTOR WON'T WORK.
+# Feature Extraction using ConvNets
+Traditional machine learning approach uses feature extraction for images using Global descriptors such as Local Binary Patterns, Histogram of Oriented Gradients, Color Histograms etc. or Local descriptors such as SIFT, SURF, ORB etc. Instead of using hand-crafted features, Deep Neural Nets automatically learns these features from images in a hierarchical fashion. 
+Thus, we can use a Convolutional Neural Network as a Feature Extractor by taking the activations available before the last fully connected layer of the network (i.e. before the final softmax classifier). These activations will be acting as the feature vector for a machine learning classifier which further learns to classify it. This type of approach is well suited for Image Classification problems, where instead of training a CNN from scratch (which is time-consuming and tedious), a pre-trained CNN could be used as a Feature Extractor.
+For extracting features using ConvNets, we have to run the python program 'features_extractor.py'. This will automatically encode the Labels and store labels and features in the disk in '.h5' format. The weigths are also saved in the disks in both '.json' and '.h5' format. The code will automatically generate 'output' folder and save labels, features and model in respective models folder.
+# Classifying 
