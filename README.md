@@ -1,11 +1,11 @@
 # Flower_Species_Recognition_using_Pretrained_Deep_Learning_models
 
-This code is for "Flower Species Recognition using Pretrained Models". In this code, we will be using the pre-trained Deep Neural Nets trained on the ImageNet challenge that are made publicly available in Keras. We will specially use Kaggle Dataset of Flower Recognition.
+This code is for "Flower Species Recognition using Pretrained Models". In this code, we will be using the pre-trained Deep Neural Nets, which is trained on the ImageNet challenge that are made publicly available in Keras. We will specially use Kaggle Dataset of Flower Recognition.
 The pre-trained models we will consider are VGG16, VGG19, Inception-v3, Xception, ResNet50, InceptionResNetv2 and MobileNet. 
 # Organizing the Dataset
-The dataset you will be provided is in Raw Form. We will have to Organize the dataset. For this you have to run the python program 'data_organizer.py'. This will automatically copy the image to the destination path. Also you have to input relevent info regarding 'path to raw dataset', 'path to training dataset', 'number of classes', 'number of images you want to train' and 'name of classes'.
+The dataset you will be provided is in Raw Form. So its better to Organize the dataset first. For this you have to run the python program 'data_organizer.py'. This will automatically copy the image to the destination path. Also you have to input relevent info regarding 'path to raw dataset', 'path to training dataset', 'number of classes', 'number of images you want to train' and 'name of classes'.
 # Model Selection
-We have many pre-trained models. So, its time to choose which Model you want to use to Extract features. For this, you have to run the python program 'model_selector.py'. This code will give you options and you have to input the model name for extracting features from training images. Also you have to input relevent info regarding 'number of classes', 'test size' and 'path to training dataset'. This code basically update the 'conf.json' file as per user input. 
+Since, we have many pre-trained models so you have to choose which Model you want to use to Extract features. For this, you have to run the python program 'model_selector.py'. This code will give you options and you have to input the model name for extracting features from training images. Also you have to input relevent info regarding 'number of classes', 'test size' and 'path to training dataset'. This code basically update the 'conf.json' file as per user input. 
 ### WARNING: YOU HAVE TO CLONE THE 'CONF/CONF.JSON' FILE OTHERWISE MODEL SELECTOR WON'T WORK.
 # Feature Extraction using ConvNets
 Traditional machine learning approach uses feature extraction for images using Global descriptors such as Local Binary Patterns, Histogram of Oriented Gradients, Color Histograms etc. or Local descriptors such as SIFT, SURF, ORB etc. Instead of using hand-crafted features, Deep Neural Nets automatically learns these features from images in a hierarchical fashion. 
@@ -14,7 +14,7 @@ For extracting features using ConvNets, you have to run the python program 'feat
 # Classifying the Dataset
 Basically, Logistic Regression is used as classifier in this code. The tensor for features is 1D so Logistic Regression will fit best in this case. For classifying, you have to run the python program 'classifier.py'. This will automatically train the classifier and find the accuracy from 1st Rank and 5th Rank, also a classificaton report and save it to 'Result.txt' file. It also generate a confusion matrix with is saved as 'confusion_matrix.jpg'.
 # Predictng Flowers directly from URL
-In this code, I have added a user input url for prediction. In this, you have to run the python program 'prediction.py' where you have to provide a url link having image of any flower. This will automatically retrive the image and save it to local memory. Then, it will automatically load the image and extract its features same way as earlier. And it will predict the class for the image. The picture will be displayed or saved in the local machine with its predicted value.
+In this code, I have added a user input url for prediction. For this, you have to run the python program 'prediction.py' where you have to provide a url link having image of any flower. This will automatically retrive the image and save it to local memory. Then, it will automatically load the image and extract its features same way as earlier. And it will predict the class for the image. The picture will be displayed or saved in the local machine with its predicted value.
 
 # Dependencies
 You will need the following Python packages to run the code.
